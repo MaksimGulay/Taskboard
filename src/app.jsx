@@ -7,7 +7,6 @@ import Register from "./components/Auth/Register";
 import Home from "./components/pages/Home";
 
 export function App() {
-  // fix
   return (
     <div>
       <Counter />
