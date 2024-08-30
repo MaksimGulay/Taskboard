@@ -1,15 +1,16 @@
 // import "./app.css";
+// import { Counter } from "./features/counter/Counter";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
-import { Counter } from "./features/counter/Counter";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
 import Home from "./components/Pages/Home";
+import { Container } from "./appStyle";
 
 export function App() {
   return (
-    <div>
-      <Counter />
+    <Container>
+      {/* <Counter /> */}
       <Router basename="/Taskboard">
         <Routes>
           <Route path="/" element={<Login />} />
@@ -17,6 +18,6 @@ export function App() {
           <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
-    </div>
+    </Container>
   );
 }
