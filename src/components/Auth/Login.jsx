@@ -30,6 +30,10 @@ function Login() {
     // Логіка для входу
     navigate("/home"); // Перехід на головну сторінку після успішного входу
   };
+
+  const handleRegister = () => {
+    navigate("/register");
+  };
   return (
     <LoginContainer>
       <FormContainer>
@@ -62,7 +66,7 @@ function Login() {
         <CreateAccount>
           <Span>
             Don’t have account?
-            <Link href="#"> Create account</Link>
+            <Link onClick={handleRegister}> Create account</Link>
           </Span>
         </CreateAccount>
       </FormContainer>

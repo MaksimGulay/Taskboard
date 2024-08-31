@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import bgImage from "../../images/loginFrame.jpg";
+import bgImage from "../../images/registerFrame.jpg";
 
-export const LoginContainer = styled.div`
+export const RegisterContainer = styled.div`
   background: var(--neutral-white);
   display: flex;
   justify-content: space-between;
@@ -12,10 +12,10 @@ export const LoginContainer = styled.div`
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 145px;
+  margin-top: 67px;
 `;
 
-export const CreateAccount = styled.div`
+export const HaveAccount = styled.div`
   display: flex;
 `;
 
@@ -28,6 +28,10 @@ export const H1 = styled.h1`
   margin-bottom: 10px;
 `;
 
+export const CreateAccount = styled.div`
+  display: flex;
+`;
+
 export const IntroText = styled.p`
   font-family: var(--font-family);
   font-weight: 400;
@@ -37,10 +41,10 @@ export const IntroText = styled.p`
   margin-bottom: 32px;
 `;
 
-export const LoginForm = styled.form`
+export const RegisterForm = styled.form`
   display: flex;
   flex-direction: column;
-  margin-bottom: 121px;
+  margin-bottom: 62px;
 `;
 
 export const LabelText = styled.label`
@@ -99,21 +103,12 @@ export const Span = styled.span`
   color: var(--neutral-body-text);
 `;
 
-export const ForgotPasswordLink = styled.a`
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 144%;
-  color: var(--neutral-title);
-  margin-bottom: 32px;
-`;
-
 export const Link = styled.a`
   font-weight: 700;
   color: var(--neutral-title);
 `;
 
-export const LoginFrame = styled.div`
+export const RegisterFrame = styled.div`
   border-radius: 23px;
   width: 703px;
   height: 844px;
