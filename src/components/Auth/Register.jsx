@@ -26,7 +26,7 @@ function Register() {
   const navigate = useNavigate();
 
   const handleRegister = () => {
-    navigate("/");
+    navigate("//");
   };
 
   const handleLogin = () => {
@@ -41,7 +41,7 @@ function Register() {
         <IntroText>
           We can assign tasks, set deadlines, and track progress effortlessly.
         </IntroText>
-        <RegisterForm>
+        <RegisterForm onSubmit={handleRegister}>
           <LabelText htmlFor="username">Username</LabelText>
           <Input
             type="text"
@@ -71,7 +71,7 @@ function Register() {
             required
           />
           <ButtonContainer>
-            <Button onClick={handleRegister}>Sign up</Button>
+            <Button type="submit">Sign up</Button>
             <GoogleIcon />
           </ButtonContainer>
         </RegisterForm>
