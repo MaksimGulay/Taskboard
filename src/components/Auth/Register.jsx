@@ -26,11 +26,11 @@ function Register() {
   const navigate = useNavigate();
 
   const handleRegister = () => {
-    navigate("/home");
+    navigate("/");
   };
 
   const handleLogin = () => {
-    navigate("/");
+    navigate("/login");
   };
 
   return (
