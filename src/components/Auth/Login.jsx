@@ -22,23 +22,27 @@ import {
 } from "../../styles/authStyle/loginStyle";
 import { GoogleIcon } from "../../icons/Google";
 import { Stars } from "../../icons/Star";
+// import { Counter } from "../../features/counter/Counter";
 
 function Login() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
     // Логіка для входу
-    navigate("/home"); // Перехід на головну сторінку після успішного входу
+    navigate("/"); // Перехід на головну сторінку після успішного входу
   };
 
   const handleRegister = () => {
     navigate("/register");
   };
+  const handleForgotPassword = () => {
+    navigate("/forgot_password");
+  };
   return (
     <LoginContainer>
       <FormContainer>
         <H1>Welcome Back!</H1>
-
+        {/* <Counter /> */}
         <IntroText>
           We can assign tasks, set deadlines, and track progress effortlessly.
         </IntroText>
@@ -57,7 +61,9 @@ function Login() {
             placeholder="Input your username here"
             required
           />
-          <ForgotPasswordLink href="#">Forgot password?</ForgotPasswordLink>
+          <ForgotPasswordLink onClick={handleForgotPassword}>
+            Forgot password?
+          </ForgotPasswordLink>
           <ButtonContainer>
             <Button onClick={handleLogin}>Sign in</Button>
             <GoogleIcon />
