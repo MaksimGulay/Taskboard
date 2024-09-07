@@ -26,7 +26,7 @@ function Register() {
   const navigate = useNavigate();
 
   const handleRegister = () => {
-    navigate("//");
+    navigate("/");
   };
 
   const handleLogin = () => {

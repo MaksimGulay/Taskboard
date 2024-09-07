@@ -4,6 +4,7 @@ export const SideBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 22px;
+  margin-right: 32px;
 `;
 
 export const SideBarHead = styled.div`

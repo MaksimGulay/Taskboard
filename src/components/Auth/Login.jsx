@@ -27,9 +27,10 @@ import { Stars } from "../../icons/Star";
 function Login() {
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLogin = (event) => {
     // Логіка для входу
-    navigate("//"); // Перехід на головну сторінку після успішного входу
+    event.preventDefault();
+    navigate("/home"); // Перехід на головну сторінку після успішного входу
   };
 
   const handleRegister = () => {
@@ -40,7 +41,7 @@ function Login() {
   };
   return (
     <LoginContainer>
-      <FormContainer>
+      <FormContainer onSubmit={handleLogin}>
         <H1>Welcome Back!</H1>
         {/* <Counter /> */}
         <IntroText>
@@ -53,19 +54,21 @@ function Login() {
             id="username"
             placeholder="Input your username here"
             required
+            autoComplete="username"
           />
           <LabelText htmlFor="password">Password</LabelText>
           <Input
-            type="text"
+            type="password"
             id="password"
             placeholder="Input your username here"
             required
+            autoComplete="current-password"
           />
           <ForgotPasswordLink onClick={handleForgotPassword}>
             Forgot password?
           </ForgotPasswordLink>
           <ButtonContainer>
-            <Button onClick={handleLogin}>Sign in</Button>
+            <Button type="submit">Sign in</Button>
             <GoogleIcon />
           </ButtonContainer>
         </LoginForm>
