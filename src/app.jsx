@@ -6,6 +6,9 @@ import Register from "./components/Auth/Register";
 import Home from "./components/Pages/Home";
 import { Container } from "./appStyle";
 import ForgotPassword from "./components/Auth/ForgotPassword";
+import { NotFound } from "./components/Pages/NotFound";
+import { TaskList } from "./components/Tasks/TaskList";
+import { TaskItem } from "./components/Tasks/TaskItem";
 
 export function App() {
   return (
@@ -17,6 +20,9 @@ export function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot_password" element={<ForgotPassword />} />
+          <Route path="/tasks" element={<TaskList />} />
+          <Route path="/tasks/:taskId" element={<TaskItem />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>
     </Router>

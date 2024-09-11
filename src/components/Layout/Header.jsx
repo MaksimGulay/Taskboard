@@ -10,11 +10,14 @@ import {
 import { Avatar } from "../../icons/Avatar";
 
 export function Header() {
+  const handleClick = function () {
+    console.log("button clicked");
+  };
   return (
     <HeaderContainer>
       <ItemsContainet>
         <Input type="text" />
-        <CreateButton>Create New Tast</CreateButton>
+        <CreateButton onClick={handleClick}>Create New Tast</CreateButton>
         <NotificationButton></NotificationButton>
         <ProfileButton>
           <Avatar />
