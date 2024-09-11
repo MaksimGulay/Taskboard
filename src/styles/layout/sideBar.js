@@ -78,7 +78,7 @@ export const MenuItem = styled.li`
   gap: 8px;
 `;
 
-export const ItemText = styled.p`
+export const ItemLink = styled.a`
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;

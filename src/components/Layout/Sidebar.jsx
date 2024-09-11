@@ -3,7 +3,7 @@ import { TaskBordIcon } from "../../icons/Taskbord";
 import { HomeIcon } from "../../icons/HomeIcon";
 import { CalendarIcon } from "../../icons/CalendarIcon";
 import {
-  ItemText,
+  ItemLink,
   LogoTitle,
   LogoVraper,
   MenuBlock,
@@ -15,8 +15,19 @@ import {
   SideBarHead,
 } from "../../styles/layout/sideBar";
 import { TaskIcon } from "../../icons/TaskIcon";
+import { useNavigate } from "react-router-dom";
 
 function SideBar() {
+  const navigate = useNavigate();
+  const handleCalendarClick = () => {
+    navigate("calendar");
+  };
+  const handleHomeClick = () => {
+    navigate("/");
+  };
+  const handleTaskListClick = () => {
+    navigate("task_list");
+  };
   return (
     <SideBarContainer>
       <SideBarHead>
@@ -31,15 +42,15 @@ function SideBar() {
           <MenuItems>
             <MenuItem>
               <HomeIcon />
-              <ItemText>Home</ItemText>
+              <ItemLink onClick={handleHomeClick}>Home</ItemLink>
             </MenuItem>
             <MenuItem>
               <CalendarIcon />
-              <ItemText>Calendar</ItemText>
+              <ItemLink onClick={handleCalendarClick}>Calendar</ItemLink>
             </MenuItem>
             <MenuItem>
               <TaskIcon />
-              <ItemText>My tasks</ItemText>
+              <ItemLink onClick={handleTaskListClick}>My tasks</ItemLink>
             </MenuItem>
           </MenuItems>
         </MenuBlock>
