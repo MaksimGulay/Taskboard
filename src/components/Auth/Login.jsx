@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { replace, useNavigate } from "react-router-dom";
 import {
   Button,
   ButtonContainer,
@@ -30,7 +30,7 @@ function Login() {
   const handleLogin = (event) => {
     // Логіка для входу
     event.preventDefault();
-    navigate("/home"); // Перехід на головну сторінку після успішного входу
+    navigate("/", { replace: true }); // Перехід на головну сторінку після успішного входу
   };
 
   const handleRegister = () => {

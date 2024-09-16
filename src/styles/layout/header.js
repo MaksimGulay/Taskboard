@@ -20,6 +20,10 @@ export const ItemsContainet = styled.div`
   gap: 16px;
 `;
 
+export const Form = styled.form`
+display: flex;
+gap: 16px`
+
 export const Input = styled.input`
   border: 1px solid var(--neutral-stroke);
   border-radius: 8px;
