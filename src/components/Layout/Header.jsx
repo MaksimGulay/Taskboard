@@ -10,13 +10,13 @@ import {
 } from "../../styles/layout/header";
 import { Avatar } from "../../icons/Avatar";
 import { useDispatch } from "react-redux";
-import { addTask } from "../../redux/tasks/actions";
-
+import { addTask } from "../../redux/slices/tasksSlice";
+// import { addTask } from "../../redux/tasks/actions";
 
 export function Header() {
   const dispatch = useDispatch();
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
     // Викликаємо генератор екшену та передаємо текст завдання для поля payload
@@ -29,7 +29,7 @@ export function Header() {
       <ItemsContainet>
         <Form onSubmit={handleSubmit}>
           <Input type="text" name="text" placeholder="Enter task text..." />
-        <CreateButton type="submit">Create New Tast</CreateButton>
+          <CreateButton type="submit">Create New Tast</CreateButton>
         </Form>
         <NotificationButton></NotificationButton>
         <ProfileButton>

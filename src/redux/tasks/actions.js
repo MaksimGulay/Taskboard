@@ -1,44 +1,23 @@
 // файл оголошення екшенів програми
-import { nanoid } from "nanoid";
 
-export const addTask = text => {
+import { createAction, nanoid } from "@reduxjs/toolkit";
+
+export const addTask = createAction("tasks/addTask", text => {
     return {
-    type:  "tasks/addTast",
-    payload: {
-        id: nanoid(),
-        text: "",
-        compleated: false,
-        text,
+        payload: {
+            text,
+            id: nanoid(),
+            completed: false,
+            important: false,
+        }
     }
-}
-}
+})
 
-export const deleteTask = taskId =>  {
-    return {
-        type: "tasks/deleteTast",
-        payload: taskId}
-    
-}
+export const deleteTask = createAction("tasks/deleteTask") 
 
-export const setImportant = taskId => {
-  return {
-      type: "tasks/setImportant",
-      payload: taskId
-  }
-}
+export const setImportant = createAction("tasks/setImportant")
 
-export const toggleCompleted = taskId => {
-    return {
-        type: "tasks/toggleCompleted",
-        payload: taskId
-    }
+export const toggleCompleted = createAction("tasks/toggleCompleted") 
+
+export const setStatusFilter = createAction("filters/setStatusFilter")
     
-  };
-  
-  export const setStatusFilter = value => {
-    return {
-        type: "filters/setStatusFilter",
-        payload: value,
-    }
-    
-  };
